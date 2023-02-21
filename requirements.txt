@@ -4,3 +4,5 @@ asyncio
 io
 decouple
 discord
+pillow
+numpy
