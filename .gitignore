@@ -4,6 +4,7 @@ build/
 __pycache__/
 data/
 images/
+!images/.dummy
 dist/
 .env
 test*.py
