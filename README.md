@@ -1,6 +1,11 @@
 
 # Discord bot
-
+```
+cp .env.example .env
+```
+```
+update .env with new config
+```
 ```
 pip install -r requirements.txt
 ```
