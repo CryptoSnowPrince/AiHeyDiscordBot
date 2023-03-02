@@ -6,3 +6,4 @@ discord
 pillow
 numpy
 python-dotenv
+aiogram
