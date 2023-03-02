@@ -10,8 +10,8 @@ python3 aiheybot.py
 ```
 ### product mode
 ```
-pm2 start aiheybot.py --name aiheybot --interpreter python3
+pm2 start aiheybot.py --name aiheydicordbot --interpreter python3
 ```
 ```
-pm2 stop bot.py
+pm2 stop aiheybot.py
 ```

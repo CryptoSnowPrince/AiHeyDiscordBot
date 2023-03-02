@@ -1,8 +1,8 @@
 requests>=2.25.0
 replicate
 asyncio
-io
 decouple
 discord
 pillow
 numpy
+python-dotenv

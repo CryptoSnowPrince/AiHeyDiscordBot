@@ -1,45 +1,46 @@
 import discord
 import os
 import requests
-import io
 import asyncio
 import keyboards
 import string
 import time
 import replicate
 import urllib.request
-from decouple import config
+from dotenv import dotenv_values
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 
 import myconfig
 import messages
+config = dotenv_values(".env")
 
-os.environ['REPLICATE_API_TOKEN'] = config('REPLICATE_API_TOKEN')
+os.environ['REPLICATE_API_TOKEN'] = config['REPLICATE_API_TOKEN']
 
-replicate_token = config('REPLICATE_TOKEN')
+replicate_token = config['REPLICATE_TOKEN']
 
 client = discord.Client(intents=discord.Intents.all())
 PREFIX = "/hey"
 
 @client.event
 async def on_ready():
-    for guild in client.guilds:
-        if guild.name == config("DISCORD_GUILD"):
-            break
-    print(
-        f'{client.user} is connected to the following guild:\n'
-        f'{guild.name}(id: {guild.id})'
-    )
+    # for guild in client.guilds:
+    #     if guild.name == config("DISCORD_GUILD"):
+    #         break
+    # print(
+    #     f'{client.user} is connected to the following guild:\n'
+    #     f'{guild.name}(id: {guild.id})'
+    # )
+    pass
 
 
 
 @client.event
 async def on_message(message):
     
-    for guild in client.guilds:
-        if guild.name == config("DISCORD_GUILD"):
-            break
+    # for guild in client.guilds:
+    #     if guild.name == config("DISCORD_GUILD"):
+    #         break
 
     if message.author == client.user:
         return
@@ -153,4 +154,4 @@ def water_mark(image_url, username):
     watermark_im = Image.alpha_composite(im, watermark_im)
     watermark_im.save(f"images/{username}_watermarked.png")
 
-client.run(config('TOKEN'))
+client.run(config['TOKEN'])
