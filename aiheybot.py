@@ -97,7 +97,7 @@ async def handle_input(message):
         percent_m = ""
         if percent:
             percent_m = percent
-        print(prediction.status, origin_username, message.text, percent)
+
         if percent_m != old_percent_m:
             # await wait_m.edit_text("Processing request from @" + origin_username + " | " + prompt + " | " + percent_m)
             pass
