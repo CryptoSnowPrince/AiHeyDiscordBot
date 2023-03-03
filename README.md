@@ -11,12 +11,12 @@ pip install -r requirements.txt
 ```
 ### dev mode
 ```
-python3 aiheybot.py
+python3 bot.py
 ```
 ### product mode
 ```
-pm2 start aiheybot.py --name aiheydicordbot --interpreter python3
+pm2 start bot.py --name aiheydicordbot --interpreter python3
 ```
 ```
-pm2 stop aiheybot.py
+pm2 stop bot.py
 ```
