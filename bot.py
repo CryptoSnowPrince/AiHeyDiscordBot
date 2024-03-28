@@ -136,8 +136,8 @@ async def handle_input(message):
         name=f"{message.author}",
     )
     embed.set_footer(
-        text="AiHey Footer",
-        # icon_url="file://aihey_watermark.png",
+        text="Footer",
+        # icon_url="file://watermark.png",
     )
     file = discord.File(photo, 'image.jpg')
     embed.set_image(url=f"attachment://images/{username}_watermarked.png")
@@ -149,7 +149,7 @@ async def handle_input(message):
 def water_mark(image_url, username):
     urllib.request.urlretrieve(image_url, f"images/{username}.png")
     im = Image.open(f"images/{username}.png").convert("RGBA")
-    water_mark = Image.open("aihey_watermark.png").convert("RGBA")
+    water_mark = Image.open("watermark.png").convert("RGBA")
     alpha = water_mark.split()[-1]
     alpha = alpha.point(lambda p: int(float(p)/1.5))
     water_mark.putalpha(alpha)
