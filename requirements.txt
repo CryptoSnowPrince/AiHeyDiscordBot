@@ -6,4 +6,4 @@ discord
 pillow
 numpy
 python-dotenv
-aiogram
+aiogram == 2.21.0

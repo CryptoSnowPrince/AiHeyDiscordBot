@@ -20,7 +20,7 @@ os.environ['REPLICATE_API_TOKEN'] = config['REPLICATE_API_TOKEN']
 replicate_token = config['REPLICATE_TOKEN']
 
 client = discord.Client(intents=discord.Intents.all())
-PREFIX = "/hey"
+PREFIX = "/prince"
 
 
 @client.event
@@ -116,10 +116,10 @@ async def handle_input(message):
     water_mark(generated_image_url, username)
     photo = open(f"images/{username}_watermarked.png", "rb")
     await wait_m.delete()
-    Buy = "https://pancakeswap.finance/swap"
-    Telegram = "https://discord.com/invite/JYjQGRMuC8"
-    Website = "https://aihey.co"
-    Telegram_text = "Join AiHey"
+    Buy = "https://metabest.tech"
+    Telegram = "https://t.me/CryptoSnowPrince"
+    Website = "https://metabest.tech"
+    Telegram_text = "CryptoSnowPrince"
     Website_text = "Website"
     Buy_text = "Remove Watermark"
     LIST_text = "LIST AS NFT"
